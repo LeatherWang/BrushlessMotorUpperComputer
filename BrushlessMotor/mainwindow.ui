@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>782</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>330</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关闭</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>330</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>0</y>
+      <width>20</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>60</y>
+      <width>471</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>&lt;驱动器名字&gt;</string>
+    </property>
+    <widget class="QPushButton" name="pushbutton_MotorFeedback">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>140</y>
+       <width>130</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Motor/Feedback</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_IO">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>130</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Input/Output</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_I_loop">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>140</y>
+       <width>50</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>I Loop</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_CVM">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>130</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CVM Control Program</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_IO_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>130</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CAN Configuration</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_IO_4">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>140</y>
+       <width>50</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>P Loop</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_IO_5">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>140</y>
+       <width>50</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>V Loop</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget_Brushless">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>221</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>项目</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>状态：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>未打开</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ID">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>改变背景</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>54</width>
+      <height>12</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>驱动器ID：</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>782</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <widget class="QMenu" name="menu_language">
+     <property name="title">
+      <string>语言</string>
+     </property>
+     <addaction name="action_TransToEnglish"/>
+     <addaction name="action_TransToChinese"/>
+    </widget>
+    <addaction name="action_NewModel"/>
+    <addaction name="menu_language"/>
+    <addaction name="action_serial"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="action_OpenScope"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_OpenScope"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_TransToEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="action_TransToChinese">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>中文</string>
+   </property>
+  </action>
+  <action name="action_serial">
+   <property name="text">
+    <string>串口配置</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_OpenScope">
+   <property name="text">
+    <string>示波器</string>
+   </property>
+  </action>
+  <action name="action_NewModel">
+   <property name="text">
+    <string>新建模型</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

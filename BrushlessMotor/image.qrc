@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/connected.png</file>
+        <file>image/disconnected.png</file>
+        <file>image/scope.png</file>
+        <file>image/I_Loop.png</file>
+        <file>image/brake_stop.png</file>
+    </qresource>
+</RCC>
