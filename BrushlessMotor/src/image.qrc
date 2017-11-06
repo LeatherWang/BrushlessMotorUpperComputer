@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../image/connected.png</file>
+        <file>../image/control_panel.png</file>
+        <file>../image/disconnected.png</file>
+        <file>../image/error_log.png</file>
+        <file>../image/phase.png</file>
+        <file>../image/scope.png</file>
+        <file>../image/setting.png</file>
+    </qresource>
+</RCC>
