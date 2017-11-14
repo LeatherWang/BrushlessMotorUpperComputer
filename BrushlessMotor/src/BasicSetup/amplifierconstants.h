@@ -1,11 +1,9 @@
 #ifndef AMPLIFIERCONSTANTS_H
 #define AMPLIFIERCONSTANTS_H
 #include <iostream>
-#include "string.h"
 #include <QStringList>
 
 using namespace std;
-
 class AmplifierConstants
 {
 public:

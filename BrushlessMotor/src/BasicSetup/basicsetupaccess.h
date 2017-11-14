@@ -15,7 +15,6 @@ public:
     BasicSetupAccess(QString &iniFilePath);
 
 private:
-    BasicSetupDriver *basicSetupDriver;
     void initData(QString &iniFilePath);
     short combinedMtrFamilyType;
     short savedCombinedMtrFamilyType;
@@ -28,5 +27,4 @@ public:
     QString getMotorID();
     bool isConfiguredMotor();
 };
-
 #endif // BASICSETUPACCESS_H

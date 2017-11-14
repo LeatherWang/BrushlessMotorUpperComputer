@@ -8,7 +8,6 @@ INPUT(
 ./release\basicsetupwizard.o
 ./release\motorfeedback.o
 ./release\basicsetupdriver.o
-./release\basicsetupaccess.o
 ./release\amplifierconstants.o
 ./release\treewidget.o
 ./release\qrc_image.o

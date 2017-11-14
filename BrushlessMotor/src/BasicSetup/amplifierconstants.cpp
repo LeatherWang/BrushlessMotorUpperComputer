@@ -38,4 +38,3 @@ string AmplifierConstants::getMotorFamilyString(short family)
     return motorFamilyStr;
 }
 
-

@@ -1,22 +1,34 @@
 #include "basicsetupdriver.h"
+#include <QDir>
 
-BasicSetupDriver::BasicSetupDriver(QString &iniFilePath)
+shared_ptr<BasicSetupDriver> BasicSetupDriver::basicSetupDriver_ = nullptr;
+
+BasicSetupDriver::~BasicSetupDriver()
 {
-    initData(iniFilePath);
+
 }
 
-void BasicSetupDriver::initData(QString &iniFilePath)
+/**
+* @brief You should call this function before you use a new medel.
+* @param the path of iniFilePath
+* @return no
+*/
+void BasicSetupDriver::setParameterFile(QString &iniFilePath)
 {
+    if(basicSetupDriver_ == nullptr)
+        basicSetupDriver_ = shared_ptr<BasicSetupDriver>(new BasicSetupDriver);
+
     QSettings settings(iniFilePath, QSettings::IniFormat);
-    m_motorID = settings.value(QString("Motor ID")).toString();
-    m_combinedMotorFamilyType = settings.value(QString("Motor Type")).toString().toShort();
-    m_motorFamily = ((short)(m_combinedMotorFamilyType & 0x30));
-    m_motorType = ((short)(m_combinedMotorFamilyType & 0x1));
+    basicSetupDriver_->m_motorID = settings.value(QString("Motor ID")).toString(); //@TODO:如果不存在该参数的异常处理
+    basicSetupDriver_->m_combinedMotorFamilyType = settings.value(QString("Motor Type")).toString().toShort();
+    basicSetupDriver_->m_motorFamily = ((short)(basicSetupDriver_->m_combinedMotorFamilyType & 0x30));
+    basicSetupDriver_->m_motorType = ((short)(basicSetupDriver_->m_combinedMotorFamilyType & 0x1));
+    basicSetupDriver_->m_ampFeaturesCapable = 0x01;
 }
 
 bool BasicSetupDriver::createConfigFile(const QString &iniFilePath)
 {
-    settings = new QSettings(iniFilePath, QSettings::IniFormat);//TODO
+    //settings = new QSettings(iniFilePath, QSettings::IniFormat);//TODO
     //settings->setValue(QString("ID"), ui->comboBox_brushlessID->currentText());
 }
 
@@ -34,12 +46,34 @@ bool BasicSetupDriver::readConfigFile()
 
 QString BasicSetupDriver::getMotorID()
 {
-    return this->m_motorID;
+    return basicSetupDriver_->m_motorID;
 }
 
 short BasicSetupDriver::getCombinedMotorFamilyType()
 {
-    return this->m_combinedMotorFamilyType;
+    return basicSetupDriver_->m_combinedMotorFamilyType;
 }
+
+bool BasicSetupDriver::isConfiguredMotor()
+{
+    return true;
+}
+
+/**
+* @brief
+* 0 hallsSupported
+* 1
+* 2
+* 3
+* 4 5 6 7
+* @param
+* @return no
+*/
+short BasicSetupDriver::getAmpFeaturesCapable()
+{
+    return basicSetupDriver_->m_ampFeaturesCapable;
+}
+
+
 
 

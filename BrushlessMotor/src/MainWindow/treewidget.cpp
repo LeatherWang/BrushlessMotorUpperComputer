@@ -22,6 +22,8 @@ bool MainWindow::InitTreeWidget()
             this->AddTreeChild(fi.fileName());
         }
     }
+    QString configFilePath = QString("../config/") + QString("%1/%1.ini").arg("arm"); //@TODO
+    BasicSetupDriver::setParameterFile(configFilePath);
 
     ui->treewidget_ServoMotor->expandAll();
     return true;

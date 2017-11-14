@@ -33,7 +33,6 @@ SOURCES += \
     BasicSetup/basicsetupwizard.cpp \
     LoopPanels/motorfeedback.cpp \
     BasicSetup/basicsetupdriver.cpp \
-    BasicSetup/basicsetupaccess.cpp \
     BasicSetup/amplifierconstants.cpp \
     MainWindow/treewidget.cpp
 
@@ -51,7 +50,6 @@ HEADERS += \
     BasicSetup/basicsetupwizard.h \
     LoopPanels/motorfeedback.h \
     BasicSetup/basicsetupdriver.h \
-    BasicSetup/basicsetupaccess.h \
     BasicSetup/amplifierconstants.h
 
 DISTFILES += \

@@ -7,9 +7,10 @@ BasicSetupAccess::BasicSetupAccess(QString &iniFilePath)
 
 void BasicSetupAccess::initData(QString &iniFilePath)
 {
-    basicSetupDriver = new BasicSetupDriver(iniFilePath);
-    combinedMtrFamilyType = this->basicSetupDriver->getCombinedMotorFamilyType();
-    this->savedCombinedMtrFamilyType = this->combinedMtrFamilyType;
+//    basicSetupDriver = new BasicSetupDriver(iniFilePath);
+//    combinedMtrFamilyType = this->basicSetupDriver->getCombinedMotorFamilyType();
+//    this->savedCombinedMtrFamilyType = this->combinedMtrFamilyType;
+
 }
 
 QString BasicSetupAccess::getMotorID()
@@ -24,7 +25,7 @@ short BasicSetupAccess::getMotorFamily()
 
 short BasicSetupAccess::getMotorType()
 {
-    return (short)(this->combinedMtrFamilyType & 0x1);
+    return (short)(this->combinedMtrFamilyType & 0x01);
 }
 /*
 void BasicSetupAccess::setMotorFamily(short family)
